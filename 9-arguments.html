@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f() {
+        console.log(arguments);
+    }
+
+
+    f();
+
+    // hasOwnProperty  или относиться свойство к данному обьекту
+    // isPrototypeOf проверяет или обект входит в прототим другого обьекта
+    // propertyIsEnumerable можно ли пройти for in
+    // toLocaleString возвращает строку приведенную к локале
+    //toString  приветедние к строке
+
+    // пример valueOf
+    var o = new Object();
+    let myVar = o.valueOf();// [object Object]
+    console.log(myVar);
+</script>
+</body>
+</html>

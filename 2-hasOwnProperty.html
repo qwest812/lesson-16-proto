@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict";
+    var animal = {
+        eats: true
+    };
+
+    var rabbit = {
+        jumps: true,
+        __proto__: animal
+    };
+
+    // console.log(rabbit);
+
+    for (var key in rabbit) {
+        if (!rabbit.hasOwnProperty(key)) continue; // пропустить "не свои" свойства
+        console.log(key + " = " + rabbit[key]); // выводит только "jumps"
+    }
+</script>
+</body>
+</html>

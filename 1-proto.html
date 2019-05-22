@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Humman={name:"Human"};
+    // console.log(Humman);
+    var student={name:"STUDENT"};
+    student.__proto__=Humman;
+    console.log(student);
+    //
+    console.log(student.name); //STUDENT
+    //
+    delete student.name;// name: STUDENT
+    //
+    console.log(student.name);
+
+delete  Humman.name;
+    //
+    delete student.name;
+    console.log(student.name);
+
+</script>
+</body>
+</html>

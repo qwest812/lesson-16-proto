@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Измерение  выполнение скрипта</title>
+</head>
+<body>
+<script>
+    var arr = [];
+    for (var i = 0; i < 10000; i++) arr[i] = 0;
+    var length=arr.length;
+    // console.log(arr);
+
+    function walkIn(arr) {
+        for (var key in arr) arr[key]++;
+    }
+
+    function walkLength(arr) {
+        for (var i = 0; i < arr.length; i++) arr[i]++;
+    }
+    function walLength2(arr, lenght) {
+        for (var i = 0; i < lenght; i++) arr[i]++;
+    }
+
+    function bench(nameFunc,leght) {
+
+        for (var i = 0; i < 10000; i++) nameFunc(arr,leght);
+    }
+
+    console.time("All Benchmarks");
+
+    console.time("walkIn");
+    bench(walkIn);
+    console.timeEnd("walkIn");
+
+    console.time("walkLength");
+    bench(walkLength);
+    console.timeEnd("walkLength");
+    console.time("walkLength2");
+    bench(walkLength);
+    console.timeEnd("walkLength2");
+    console.timeEnd("All Benchmarks");
+    console.log(arr);
+
+
+    // console.time("walkLength");
+    // for (var i = 0; i < arr.length; i++) arr[i]++;
+    // console.timeEnd("walkLength");
+    //
+    //
+    // console.time("walkLength2");
+    // for (var i = 0; i < length; i++) arr[i]++;
+    // console.timeEnd("walkLength2");
+</script>
+</body>
+</html>

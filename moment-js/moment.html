@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="moment.js"></script>
+<script>
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a')); // апрель 18-го 2019, 11:02:45 утра
+    console.log(moment().format('dddd'));                    // четверг
+    console.log(moment().format("MMM Do YY"));               // апр. 18-го 19
+    console.log(moment().format('YYYY [escaped] YYYY'));     // 2019 escaped 2019
+    console.log(moment().format());                          // 2019-04-18T11:02:45+03:00
+
+</script>
+</body>
+</html>

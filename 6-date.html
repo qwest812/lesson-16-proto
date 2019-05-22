@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 01.01.1970 GMT+0
+
+    let now = new Date();
+    console.log(now);
+
+    // new Date(year, month, date, hours, minutes, seconds, ms)
+
+    let today = new Date(2019,4,21);
+    console.log(today);
+
+    // getYear() - не использовать
+    // getFullYear()
+    // Получить год (из 4 цифр)
+    // getMonth()
+    // Получить месяц, от 0 до 11.
+    // getDate()
+    // Получить число месяца, от 1 до 31.
+    // getHours(), getMinutes(), getSeconds(), getMilliseconds()
+    console.log(today.getFullYear());
+    console.log(now.getHours());
+    console.log(now.getMinutes());
+    console.log(now.getSeconds());
+    console.log(now.getMilliseconds());
+
+
+
+    // setFullYear(year [, month, date])
+    // setMonth(month [, date])
+    // setDate(date)
+    // setHours(hour [, min, sec, ms])
+    // setMinutes(min [, sec, ms])
+    // setSeconds(sec [, ms])
+    // setMilliseconds(ms)
+    // setTime(milliseconds) (устанавливает всю дату по миллисекундам с 01.01.1970 UTC)
+
+
+    // var today = new Date;
+
+    today.setHours(12);
+    console.log(today);  // сегодня, но час изменён на 0
+
+    today.setHours(10, 20, 30, 40);
+    console.log(today);  // сегодня, ровно 00:00:00.
+
+
+
+    //автоисправление
+    var d = new Date(2013, 1, 40); // 32 января 2013 ?!?
+    console.log(d); // ... это 1 февраля 2013!
+
+
+    let test = new Date(2019, 4,21,19);
+    console.log(test);
+    let hour =test.getHours();
+
+    console.log(hour);
+    if(hour >=20){
+
+        console.log("добрый вечер");
+    }else {
+        console.log("добрый rrr");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // что бі не дублировать свойства
+    // function Animal(name) {
+    //     this.name = name;
+    //     this.speed = 0;
+    // }
+    //
+    // function Rabbit(name) {
+    //     this.name = name;
+    //     this.speed = 0;
+    // }
+
+
+    function Animal(name) {
+            this.name = name;
+        this.speed = 0;
+    }
+    function Rabbit(name) {
+        Animal.apply(this, arguments);
+    }
+
+    console.log(Rabbit);
+</script>
+</body>
+</html>

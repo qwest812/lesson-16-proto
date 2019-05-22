@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let obj = {};
+    let arr = [];
+    let string = "sfdsf";
+
+
+    console.log(obj);
+    console.log(arr);
+    console.log(string);
+
+    console.log(obj.toString());
+
+    let obj2 = new Object("sd");
+    // obj2.prototype.toString = function () {
+    //     return "ggg";
+    // };
+    // obj2.toString();
+    //
+
+    function Foo() {
+
+    }
+
+    Foo.prototype.toString = function () {
+        return "bew";
+    };
+    var f = new Foo();
+    console.log(f.toString());
+
+
+    console.log(f);
+    console.log(obj2);
+</script>
+</body>
+</html>

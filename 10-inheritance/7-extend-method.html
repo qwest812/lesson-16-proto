@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расширить метод</title>
+</head>
+<body>
+<script>
+    Rabbit.prototype.run = function() {
+        // вызвать метод родителя, передав ему текущие аргументы
+        Animal.prototype.run.apply(this, arguments);
+        this.jump();
+    }
+</script>
+</body>
+</html>

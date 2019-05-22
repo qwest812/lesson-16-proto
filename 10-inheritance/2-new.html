@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // https://learn.javascript.ru/class-inheritance
+    // Animal
+    function Animal(name) {
+        this.name = name;
+        this.speed = 0;
+    }
+
+    Animal.prototype.run = function(speed) {
+        this.speed += speed;
+        alert( this.name + ' бежит, скорость ' + this.speed );
+    };
+
+    Animal.prototype.stop = function() {
+        this.speed = 0;
+        alert( this.name + ' стоит' );
+    };
+
+    // Rabit
+    function Rabbit(name) {
+        this.name = name;
+        this.speed = 0;
+    }
+
+    Rabbit.prototype.jump = function() {
+        this.speed++;
+        alert( this.name + ' прыгает' );
+    };
+
+    var rabbit = new Rabbit('Кроль');
+
+
+    // rabbit -> Rabbit.prototype -> Animal.prototype
+
+    // link on Animal.prototype
+    // Rabbit.prototype.__proto__ = Animal.prototype; // dosn't work ie10
+    Rabbit.prototype = Object.create(Animal.prototype);
+    // Rabbit.prototype.constructor = Rabbit;// если дальше хотим использовать конструктор
+
+    console.log(rabbit);
+
+</script>
+
+</body>
+</html>

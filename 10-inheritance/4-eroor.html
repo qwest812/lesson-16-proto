@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // вместо Rabbit.prototype = Object.create(Animal.prototype)
+    Rabbit.prototype = new Animal();
+    // Но у этого подхода важный недостаток. Как правило мы не хотим создавать Animal, а хотим только унаследовать его методы!
+</script>
+</body>
+</html>
